@@ -2,6 +2,7 @@
 import com.company.assembleegameclient.ui.DeprecatedClickableText;
 import com.company.assembleegameclient.ui.Scrollbar;
 
+import com.company.assembleegameclient.sound.Music;
 import flash.display.DisplayObject;
 import flash.display.Shape;
 import flash.display.Sprite;
@@ -64,6 +65,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     private var BOUNDARY_LINE_ONE_Y:int = 106;
 
     public function CharacterSelectionAndNewsScreen() {
+        Music.chooseMusic("menu");
         this.newCharacter = new Signal();
         this.chooseName = new Signal();
         this.playGame = new Signal();
