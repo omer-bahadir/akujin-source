@@ -3,6 +3,7 @@ import com.company.assembleegameclient.screens.AccountScreen;
 import com.company.assembleegameclient.screens.TitleMenuOption;
 import com.company.assembleegameclient.ui.SoundIcon;
 
+import com.company.assembleegameclient.sound.Music;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
 import flash.external.ExternalInterface;
@@ -53,6 +54,7 @@ public class TitleView extends Sprite {
     private var migrateButton:TitleMenuOption;
 
     public function TitleView() {
+        Music.chooseMusic("menu");
         var _local_2:String;
         this.menuOptionsBar = this.makeMenuOptionsBar();
         this.optionalButtonsAdded = new Signal();

@@ -1,6 +1,7 @@
 ﻿package kabam.rotmg.maploading.view {
 import kabam.rotmg.maploading.commands.CharacterAnimationFactory;
 import kabam.rotmg.maploading.signals.HideMapLoadingSignal;
+import com.company.assembleegameclient.sound.Music;
 import kabam.rotmg.maploading.signals.HideMapLoadingSignalNoFade;
 import kabam.rotmg.maploading.signals.MapLoadedSignal;
 import kabam.rotmg.messaging.impl.incoming.MapInfo;
@@ -30,6 +31,7 @@ public class MapLoadingMediator extends Mediator {
 
     private function onMapLoaded(_arg_1:MapInfo):void {
         this.view.showMap(_arg_1.displayName_, _arg_1.difficulty_);
+        Music.chooseMusic(_arg_1.displayName_);
     }
 
     override public function destroy():void {
