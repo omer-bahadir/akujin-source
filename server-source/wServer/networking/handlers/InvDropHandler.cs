@@ -65,7 +65,14 @@ namespace wServer.networking.handlers
                 if (item != null)
                 {
                     Container container;
-                        if (Client.Account.Rank >= 10)
+                    if (item.Soulbound)
+                    {
+                        container = new Container(client.Player.Manager, SOUL_BAG, 1000 * 30, true)
+                        {
+                            BagOwners = new string[1] { client.Player.AccountId }
+                        };
+                    }
+                    if (Client.Account.Rank >= 80)
                     {
                         container = new Container(client.Player.Manager, SOUL_BAG, 1000 * 30, true)
                         {
