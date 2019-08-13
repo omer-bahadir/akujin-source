@@ -72,7 +72,7 @@ namespace wServer.networking.handlers
                             BagOwners = new string[1] { client.Player.AccountId }
                         };
                     }
-                    if (Client.Account.Rank >= 80)
+                    if (Client.Account.Rank >= 10)
                     {
                         container = new Container(client.Player.Manager, SOUL_BAG, 1000 * 30, true)
                         {
