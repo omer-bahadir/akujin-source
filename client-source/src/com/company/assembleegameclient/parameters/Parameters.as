@@ -200,7 +200,7 @@ public class Parameters {
         }
         setDefault("forceChatQuality", false);
         setDefault("hidePlayerChat", false);
-        setDefault("chatStarRequirement", 1);
+        setDefault("chatStarRequirement", 0);
         setDefault("chatAll", true);
         setDefault("chatWhisper", true);
         setDefault("chatGuild", true);
