@@ -1,6 +1,7 @@
 ﻿package kabam.rotmg.messaging.impl {
 import com.company.assembleegameclient.game.AGameSprite;
 import com.company.assembleegameclient.game.events.GuildResultEvent;
+import com.company.assembleegameclient.sound.Music;
 import com.company.assembleegameclient.game.events.NameResultEvent;
 import com.company.assembleegameclient.game.events.ReconnectEvent;
 import com.company.assembleegameclient.map.AbstractMap;
@@ -1743,6 +1744,7 @@ public class GameServerConnectionConcrete extends GameServerConnection {
     }
 
     private function onDeath(_arg_1:Death):void {
+        Music.chooseMusic("death");
         this.death = _arg_1;
         var _local_2:BitmapData = new BitmapDataSpy(gs_.stage.stageWidth, gs_.stage.stageHeight);
         _local_2.draw(gs_);
