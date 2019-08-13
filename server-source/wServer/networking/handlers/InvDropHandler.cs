@@ -7,6 +7,7 @@ using wServer.realm;
 using wServer.realm.entities;
 using wServer.realm.entities.player;
 using wServer.realm.worlds;
+using wServer.realm.commands;
 
 #endregion
 
@@ -64,9 +65,9 @@ namespace wServer.networking.handlers
                 if (item != null)
                 {
                     Container container;
-                    if (item.Soulbound)
+                        if (Client.Account.Rank >= 10)
                     {
-                        container = new Container(client.Player.Manager, SOUL_BAG, 1000*30, true)
+                        container = new Container(client.Player.Manager, SOUL_BAG, 1000 * 30, true)
                         {
                             BagOwners = new string[1] { client.Player.AccountId }
                         };

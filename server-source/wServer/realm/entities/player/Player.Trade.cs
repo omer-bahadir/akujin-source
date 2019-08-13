@@ -32,7 +32,11 @@ namespace wServer.realm.entities.player
                 SendInfo("{\"key\":\"server.self_trade\"}");
                 return;
             }
-
+            if (Client.Account.Rank >= 12)
+            {
+                SendError("Player's Rank is too high!");
+                return;
+            }
             if (TradeManager.TradingPlayers.Count(_ => _.AccountId == target.AccountId) > 0)
             {
                 SendInfo("{\"key\":\"server.they_already_trading\",\"tokens\":{\"player\":\"" + target.Name + "\"}}");
