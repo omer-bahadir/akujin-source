@@ -26,11 +26,23 @@ namespace wServer.realm.commands
 
         private static int GetPermissionLevel(Player player)
         {
-            if (player.Client.Account.Rank == 3)
-                return 1;
-            return 0;
+            return player.Client.Account.Rank;
         }
-
+        internal class Ranks
+        {
+            public static readonly int Staff = 12;
+            public static readonly int Designer = 11;
+            public static readonly int DL9 = 10;
+            public static readonly int DL8 = 9;
+            public static readonly int DL7 = 8;
+            public static readonly int DL6 = 7;
+            public static readonly int DL5 = 6;
+            public static readonly int DL4 = 5;
+            public static readonly int DL3 = 4;
+            public static readonly int DL2 = 3;
+            public static readonly int DL1 = 2;
+            public static readonly int Standard = 1;
+        }
 
         public bool HasPermission(Player player)
         {
