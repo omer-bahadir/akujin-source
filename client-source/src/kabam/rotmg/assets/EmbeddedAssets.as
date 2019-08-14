@@ -26,6 +26,7 @@ public class EmbeddedAssets {
     public static var lofiProjsBigEmbed_:Class = EmbeddedAssets_lofiProjsBigEmbed_;
     public static var lofiParticlesShockerEmbed_:Class = EmbeddedAssets_lofiParticlesShockerEmbed_;
     public static var lofiPartsEmbed_:Class = EmbeddedAssets_lofiPartsEmbed_;
+    public static var customItems8x8Embed_:Class = EmbeddedAssets_customItems8x8Embed_;
     public static var chars8x8rBeachEmbed_:Class = EmbeddedAssets_chars8x8rBeachEmbed_;
     public static var chars8x8dBeachEmbed_:Class = EmbeddedAssets_chars8x8dBeachEmbed_;
     public static var chars8x8rLow1Embed_:Class = EmbeddedAssets_chars8x8rLow1Embed_;

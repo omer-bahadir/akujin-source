@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+<Object type="0x60a1" id="Bloody Spear">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x00</Index>
+    </Texture>
+    <SlotType>1</SlotType>
+    <Description>A spear used so much that the blood starting dripping for all of infinity.</Description>
+    <RateOfFire>0.6</RateOfFire>
+    <Sound>weapon/glass_sword</Sound>
+    <Projectile>
+      <ObjectId>Bloody Spear Shot</ObjectId>
+      <Speed>200</Speed>
+      <MinDamage>250</MinDamage>
+      <MaxDamage>1000</MaxDamage>
+      <LifetimeMS>450</LifetimeMS>
+      <MultiHit/>
+    </Projectile>
+    <BagType>6</BagType>
+    <FameBonus>8</FameBonus>
+    <OldSound>bladeSwing</OldSound>
+    <DisplayId>Bloody Spear</DisplayId>
+  </Object>
+   <Object type="0x60a3" id="Molten Blade">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+     <File>customItems8x8</File>
+     <Index>0x02</Index>
+   </Texture>
+   <SlotType>1</SlotType>
+   <Description>yes.</Description>
+   <RateOfFire>0.8</RateOfFire>
+   <Sound>weapon/blunt_sword</Sound>
+   <Projectile>
+   	<ObjectId>Molten Shot</ObjectId>
+   	<Speed>180</Speed>
+   	<MinDamage>310</MinDamage>
+   	<MaxDamage>365</MaxDamage>
+   	<LifetimeMS>250</LifetimeMS>
+   	<Frequency>1</Frequency>
+   	<Size>100</Size>
+   	<MultiHit/>
+   </Projectile>
+   <NumProjectiles>1</NumProjectiles>
+   <ArcGap>11</ArcGap>
+   <BagType>6</BagType>
+   <FameBonus>7</FameBonus>
+   <feedPower>800</feedPower>
+   <DisplayId>Molten Blade</DisplayId>
+   </Object>
    <Object type="0xc85" id="Common Feline Egg">
       <Class>Equipment</Class>
       <Item/>

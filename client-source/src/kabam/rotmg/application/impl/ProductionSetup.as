@@ -8,7 +8,7 @@ public class ProductionSetup implements ApplicationSetup {
     private const SERVER:String = "162.248.93.207";
     private const UNENCRYPTED:String = ("http://" + SERVER);
     private const ENCRYPTED:String = ("http://" + SERVER);
-    private const BUILD_LABEL:String = "Akujins X1.0";
+    private const BUILD_LABEL:String = "<font color='#FF0080'>Akujin X1.0</font>";
 
 
     public function getAppEngineUrl(_arg_1:Boolean = false):String {

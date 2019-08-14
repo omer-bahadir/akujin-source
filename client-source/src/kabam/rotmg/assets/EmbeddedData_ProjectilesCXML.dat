@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <Objects>
+<Object type="0x60a2" id="Bloody Spear Shot">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x01</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+  <Object type="0x60a4" id="Molten Shot">
+       <Class>Projectile</Class>
+       <Texture>
+         <File>customItems8x8</File>
+         <Index>0x03</Index>
+       </Texture>
+       <AngleCorrection>1</AngleCorrection>
+     </Object>
    <Object type="0x0001" id="Heavy Crossbow Bolt">
       <Class>Projectile</Class>
       <Texture>
