@@ -75455,8 +75455,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj6</File>
-      <Index>0x69</Index>
+      <File>customItems8x8</File>
+      <Index>0x04</Index>
     </Texture>
     <SlotType>16</SlotType>
     <Description>Not even the ghost king can remember this relic, so old yet stronger than most materials we know of now, who knows how this helmet came to be.</Description>
@@ -75480,10 +75480,10 @@
   <Object type="0x0460" id="Aquarius Hammer Shot">
     <Class>Projectile</Class>
     <Texture>
-      <File>lofiObj</File>
-      <Index>0x79</Index>
+      <File>CustomItems8x8</File>
+      <Index>0x05</Index>
     </Texture>
-    <AngleCorrection>1</AngleCorrection>
+    <AngleCorrection>5</AngleCorrection>
   </Object>
 
   <Object type="0x0461" id="Void Crusher Shot">
@@ -75495,20 +75495,11 @@
     <AngleCorrection>1</AngleCorrection>
   </Object>
 
-  <Object type="0x0462" id="Bloody Spear Shot">
-    <Class>Projectile</Class>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xa8</Index>
-    </Texture>
-    <AngleCorrection>1</AngleCorrection>
-  </Object>
-
   <Object type="0x0463" id="Unholy Crossbow Shot">
     <Class>Projectile</Class>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0xbc</Index>
+      <File>customItems8x8</File>
+      <Index>0x14</Index>
     </Texture>
     <AngleCorrection>1</AngleCorrection>
   </Object>
@@ -75526,8 +75517,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0xbb</Index>
+      <File>customItems8x8</File>
+      <Index>0x13</Index>
     </Texture>
     <SlotType>9</SlotType>
     <Description>If not for this, we would have all become nothing but mere monsters to serve under hell.</Description>
@@ -75544,8 +75535,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0xba</Index>
+      <File>customItems8x8</File>
+      <Index>0x12</Index>
     </Texture>
     <SlotType>6</SlotType>
     <Description>The leather suit wasn't always cursed, but after years of grief and deception, the man who once wore it finally caved to his demonic desires.</Description>
@@ -75561,8 +75552,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0xb9</Index>
+      <File>customItems8x8</File>
+      <Index>0x11</Index>
     </Texture>
     <SlotType>20</SlotType>
     <Description>This trap is meant to counter the most demonic of creatures, its power is to be feared.</Description>
@@ -75578,8 +75569,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0xb8</Index>
+      <File>customItems8x8</File>
+      <Index>0x10</Index>
     </Texture>
     <SlotType>3</SlotType>
     <Description>The very same crossbow which tormented us for years, now no longer serves it's evil masters, but rather, us.</Description>
@@ -75602,12 +75593,28 @@
     <DisplayId>Unholy Crossbow</DisplayId>
   </Object>
 
-  <Object type="0x0469" id="Bloody Spear">
+  <Object type="0x60a2" id="Bloody Spear Shot">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x01</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+  <Object type="0x60a4" id="Molten Shot">
+       <Class>Projectile</Class>
+       <Texture>
+         <File>customItems8x8</File>
+         <Index>0x03</Index>
+       </Texture>
+       <AngleCorrection>1</AngleCorrection>
+     </Object>
+     <Object type="0x60a1" id="Bloody Spear">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0xa8</Index>
+      <File>customItems8x8</File>
+      <Index>0x00</Index>
     </Texture>
     <SlotType>1</SlotType>
     <Description>A spear used so much that the blood starting dripping for all of infinity.</Description>
@@ -75626,6 +75633,34 @@
     <OldSound>bladeSwing</OldSound>
     <DisplayId>Bloody Spear</DisplayId>
   </Object>
+   <Object type="0x60a3" id="Molten Blade">
+   <Class>Equipment</Class>
+   <Item/>
+   <Texture>
+     <File>customItems8x8</File>
+     <Index>0x02</Index>
+   </Texture>
+   <SlotType>1</SlotType>
+   <Description>yes.</Description>
+   <RateOfFire>0.8</RateOfFire>
+   <Sound>weapon/blunt_sword</Sound>
+   <Projectile>
+       <ObjectId>Molten Shot</ObjectId>
+       <Speed>180</Speed>
+       <MinDamage>310</MinDamage>
+       <MaxDamage>365</MaxDamage>
+       <LifetimeMS>250</LifetimeMS>
+       <Frequency>1</Frequency>
+       <Size>100</Size>
+       <MultiHit/>
+   </Projectile>
+   <NumProjectiles>1</NumProjectiles>
+   <ArcGap>11</ArcGap>
+   <BagType>6</BagType>
+   <FameBonus>7</FameBonus>
+   <feedPower>800</feedPower>
+   <DisplayId>Molten Blade</DisplayId>
+   </Object>
 
   <Object type="0x0470" id="Ronin's Helm">
     <Class>Equipment</Class>
@@ -75710,7 +75745,7 @@
 
 
 
-  <Object type="0x0474" id="Void Crusher" ancient="yes">
+  <Object type="0x0474" id="Void Crusher">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -75742,8 +75777,8 @@
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0x88</Index>
+      <File>customItems8x8</File>
+      <Index>0x06</Index>
     </Texture>
     <SlotType>1</SlotType>
     <Description>A hammer of unknown potential. The closest clue of its history is that of its origin, found long ago, deep in the ocean floor.</Description>

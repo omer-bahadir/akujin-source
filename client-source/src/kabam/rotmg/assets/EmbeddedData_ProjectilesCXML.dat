@@ -9,6 +9,34 @@
     </Texture>
     <AngleCorrection>1</AngleCorrection>
   </Object>
+
+  <Object type="0x0463" id="Unholy Crossbow Shot">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x14</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+
+  <Object type="0x0461" id="Void Crusher Shot">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x07</Index>
+    </Texture>
+    <AngleCorrection>1</AngleCorrection>
+  </Object>
+
+  <Object type="0x0460" id="Aquarius Hammer Shot">
+    <Class>Projectile</Class>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x05</Index>
+    </Texture>
+    <AngleCorrection>5</AngleCorrection>
+  </Object>
+
   <Object type="0x60a4" id="Molten Shot">
        <Class>Projectile</Class>
        <Texture>

@@ -53,6 +53,165 @@
    <feedPower>800</feedPower>
    <DisplayId>Molten Blade</DisplayId>
    </Object>
+
+  <Object type="0x0465" id="Necklace of Faith">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x13</Index>
+    </Texture>
+    <SlotType>9</SlotType>
+    <Description>If not for this, we would have all become nothing but mere monsters to serve under hell.</Description>
+    <ActivateOnEquip stat="0" amount="125">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="3" amount="60">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="27" amount="5">IncrementStat</ActivateOnEquip>
+    <BagType>6</BagType>
+    <FameBonus>4</FameBonus>
+    <DisplayId>Necklace of Faith</DisplayId>
+  </Object>
+
+  <Object type="0x0468" id="Unholy Crossbow">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x10</Index>
+    </Texture>
+    <SlotType>3</SlotType>
+    <Description>The very same crossbow which tormented us for years, now no longer serves it's evil masters, but rather, us.</Description>
+    <RateOfFire>0.5</RateOfFire>
+    <Sound>weapon/golden_bow</Sound>
+    <Projectile>
+      <ObjectId>Unholy Crossbow Shot</ObjectId>
+      <Speed>160</Speed>
+      <MinDamage>500</MinDamage>
+      <MaxDamage>600</MaxDamage>
+      <LifetimeMS>440</LifetimeMS>
+      <MultiHit/>
+      <ArmorPiercing/>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>4</FameBonus>
+    <NumProjectiles>2</NumProjectiles>
+    <ArcGap>5</ArcGap>
+    <OldSound>arrowShoot</OldSound>
+    <DisplayId>Unholy Crossbow</DisplayId>
+  </Object>
+
+  <Object type="0x0467" id="Menacing Blood Trap">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x11</Index>
+    </Texture>
+    <SlotType>20</SlotType>
+    <Description>This trap is meant to counter the most demonic of creatures, its power is to be feared.</Description>
+    <Usable/>
+    <BagType>4</BagType>
+    <FameBonus>4</FameBonus>
+    <MpCost>125</MpCost>
+    <Activate radius="3.5" totalDamage="1000" condEffect="Dazed" condDuration="1.5">Trap</Activate>
+    <DisplayId>Menacing Blood Trap</DisplayId>
+  </Object>
+
+  <Object type="0x0466" id="Unholy Leather">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x12</Index>
+    </Texture>
+    <SlotType>6</SlotType>
+    <Description>The leather suit wasn't always cursed, but after years of grief and deception, the man who once wore it finally caved to his demonic desires.</Description>
+    <ActivateOnEquip stat="21" amount="25">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="26" amount="5">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="0" amount="-45">IncrementStat</ActivateOnEquip>
+    <BagType>4</BagType>
+    <FameBonus>4</FameBonus>
+    <DisplayId>Unholy Leather</DisplayId>
+  </Object>
+
+  <Object type="0x0474" id="Void Crusher">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x07</Index>
+    </Texture>
+    <SlotType>1</SlotType>
+    <Tier>An</Tier>
+    <Description>A deadly hammer forged by Apep, an ancient god of chaos. The hammer gives off an absorbing glow of darkness, you sense untamed power within this weapon.</Description>
+    <RateOfFire>0.7</RateOfFire>
+    <Sound>weapon/glass_sword</Sound>
+    <Projectile>
+      <ObjectId>Void Crusher Shot</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>750</MinDamage>
+      <MaxDamage>850</MaxDamage>
+      <LifetimeMS>550</LifetimeMS>
+      <MultiHit/>
+    </Projectile>
+    <BagType>6</BagType>
+    <FameBonus>8</FameBonus>
+    <OldSound>bladeSwing</OldSound>
+    <ActivateOnEquip stat="22" amount="-15">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="21" amount="-5">IncrementStat</ActivateOnEquip>
+    <DisplayId>Void Crusher</DisplayId>
+  </Object>
+
+  <Object type="0x0475" id="Aquarius Hammer">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x06</Index>
+    </Texture>
+    <SlotType>1</SlotType>
+    <Description>A hammer of unknown potential. The closest clue of its history is that of its origin, found long ago, deep in the ocean floor.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/glass_sword</Sound>
+    <Projectile>
+      <ObjectId>Aquarius Hammer Shot</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>350</MinDamage>
+      <MaxDamage>400</MaxDamage>
+      <LifetimeMS>400</LifetimeMS>
+      <MultiHit/>
+    </Projectile>
+    <BagType>6</BagType>
+    <FameBonus>8</FameBonus>
+    <OldSound>bladeSwing</OldSound>
+    <DisplayId>Aquarius Hammer</DisplayId>
+  </Object>
+
+  <Object type="0x038d" id="Helmet of Forgotten Times">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>customItems8x8</File>
+      <Index>0x04</Index>
+    </Texture>
+    <SlotType>16</SlotType>
+    <Description>Not even the ghost king can remember this relic, so old yet stronger than most materials we know of now, who knows how this helmet came to be.</Description>
+    <ActivateOnEquip stat="21" amount="-15">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="0" amount="60">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="26" amount="7">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="20" amount="-5">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="28" amount="-5">IncrementStat</ActivateOnEquip>
+    <Usable/>
+    <BagType>6</BagType>
+    <FameBonus>6</FameBonus>
+    <MpCost>110</MpCost>
+    <Activate effect="Berserk" duration="3.5" range="6">ConditionEffectAura</Activate>
+    <Activate effect="Invulnerable" duration="3.5">ConditionEffectSelf</Activate>
+    <Activate effect="Speedy" duration="3.5" range ="6">ConditionEffectAura</Activate>
+    <Cooldown>5</Cooldown>
+    <DisplayId>Helmet of Forgotten Times</DisplayId>
+  </Object>
+
    <Object type="0xc85" id="Common Feline Egg">
       <Class>Equipment</Class>
       <Item/>
