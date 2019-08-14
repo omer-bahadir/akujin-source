@@ -38,8 +38,8 @@ public class CreateNewCharacterRect extends CharacterRect {
         _local_2 = BitmapUtil.cropToBitmapData(_local_2, 6, 6, (_local_2.width - 12), (_local_2.height - 6));
         this.bitmap_ = new Bitmap();
         this.bitmap_.bitmapData = _local_2;
-        this.bitmap_.x = CharacterRectConstants.ICON_POS_X;
-        this.bitmap_.y = CharacterRectConstants.ICON_POS_Y;
+        this.bitmap_.x = CharacterRectConstants.ICON_POS_X + 90;
+        this.bitmap_.y = CharacterRectConstants.ICON_POS_Y + 5;
         selectContainer.addChild(this.bitmap_);
     }
 

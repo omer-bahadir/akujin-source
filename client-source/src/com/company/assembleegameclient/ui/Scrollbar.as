@@ -26,7 +26,7 @@ public class Scrollbar extends Sprite {
     private var target_:Sprite;
     private var lastUpdateTime_:int;
     private var change_:Number;
-    private var backgroundFill_:GraphicsSolidFill = new GraphicsSolidFill(0xFFFFFF, 1);
+    private var backgroundFill_:GraphicsSolidFill = new GraphicsSolidFill(0x777570, 1);
     private var path_:GraphicsPath = new GraphicsPath(new Vector.<int>(), new Vector.<Number>());
     private const graphicsData_:Vector.<IGraphicsData> = new <IGraphicsData>[
         backgroundFill_, path_, GraphicsUtil.END_FILL
@@ -51,10 +51,10 @@ public class Scrollbar extends Sprite {
 
     private static function drawArrow(_arg_1:int, _arg_2:int, _arg_3:Graphics):void {
         _arg_3.clear();
-        _arg_3.beginFill(0x353535, 0.01);
+        _arg_3.beginFill(0x777570, 0.01);
         _arg_3.drawRect((-(_arg_1) / 2), (-(_arg_2) / 2), _arg_1, _arg_2);
         _arg_3.endFill();
-        _arg_3.beginFill(0xFFFFFF, 1);
+        _arg_3.beginFill(0x777570, 1);
         _arg_3.moveTo((-(_arg_1) / 2), (-(_arg_2) / 2));
         _arg_3.lineTo((_arg_1 / 2), 0);
         _arg_3.lineTo((-(_arg_1) / 2), (_arg_2 / 2));
@@ -101,12 +101,12 @@ public class Scrollbar extends Sprite {
 
     private function onRollOver(_arg_1:MouseEvent):void {
         var _local_2:Sprite = (_arg_1.target as Sprite);
-        _local_2.transform.colorTransform = new ColorTransform(1, 0.8627, 0.5216);
+        //_local_2.transform.colorTransform = new ColorTransform(1, 0.8627, 0.5216);
     }
 
     private function onRollOut(_arg_1:MouseEvent):void {
         var _local_2:Sprite = (_arg_1.target as Sprite);
-        _local_2.transform.colorTransform = new ColorTransform(1, 1, 1);
+        //_local_2.transform.colorTransform = new ColorTransform(1, 1, 1);
     }
 
     private function onBackgroundDown(_arg_1:MouseEvent):void {

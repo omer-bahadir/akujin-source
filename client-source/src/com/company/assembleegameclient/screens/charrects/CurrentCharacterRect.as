@@ -72,8 +72,8 @@ public class CurrentCharacterRect extends CharacterRect {
     public function setIcon(_arg_1:DisplayObject):void {
         ((this.icon) && (selectContainer.removeChild(this.icon)));
         this.icon = _arg_1;
-        this.icon.x = CharacterRectConstants.ICON_POS_X;
-        this.icon.y = CharacterRectConstants.ICON_POS_Y;
+        this.icon.x = CharacterRectConstants.ICON_POS_X + 90;
+        this.icon.y = CharacterRectConstants.ICON_POS_Y + 5;
         ((this.icon) && (selectContainer.addChild(this.icon)));
     }
 
@@ -95,7 +95,7 @@ public class CurrentCharacterRect extends CharacterRect {
     private function makeDeleteButton():void {
         this.deleteButton = new DeleteXGraphic();
         this.deleteButton.addEventListener(MouseEvent.MOUSE_DOWN, this.onDeleteDown);
-        this.deleteButton.x = (WIDTH - 40);
+        this.deleteButton.x = (WIDTH - 135);
         this.deleteButton.y = ((HEIGHT - this.deleteButton.height) * 0.5);
         addChild(this.deleteButton);
     }

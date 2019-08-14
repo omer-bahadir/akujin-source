@@ -5,6 +5,9 @@ import com.company.rotmg.graphics.ScreenGraphic;
 import flash.display.Sprite;
 import flash.geom.Rectangle;
 
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+
 public class MenuOptionsBar extends Sprite {
 
     private static const Y_POSITION:Number = 550;
@@ -17,6 +20,7 @@ public class MenuOptionsBar extends Sprite {
     private const rightObjects:Array = [];
 
     private var screenGraphic:ScreenGraphic;
+    public var box:SliceScalingBitmap
 
     public function MenuOptionsBar() {
         this.makeScreenGraphic();
@@ -24,6 +28,11 @@ public class MenuOptionsBar extends Sprite {
 
     private function makeScreenGraphic():void {
         this.screenGraphic = new ScreenGraphic();
+        this.box = TextureParser.instance.getSliceScalingBitmap("UI", "popup_header_title", 800);
+        this.box.height = 70;
+        this.box.x = 0;
+        this.box.y = 515;
+        addChild(this.box);
         addChild(this.screenGraphic);
     }
 

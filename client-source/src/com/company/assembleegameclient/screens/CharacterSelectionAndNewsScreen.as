@@ -91,8 +91,8 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     private function createDisplayAssets(_arg_1:PlayerModel):void {
         this.createNameText();
         this.createCreditDisplay();
-        this.createNewsText();
-        this.createNews();
+        //this.createNewsText();
+        //this.createNews();
         this.createBoundaryLines();
         this.createOpenCharactersText();
         var _local_2:Graveyard = new Graveyard(_arg_1);
@@ -125,9 +125,9 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     }
 
     private function createScrollbar():void {
-        this.scrollBar = new Scrollbar(16, 399);
-        this.scrollBar.x = 443;
-        this.scrollBar.y = 113;
+        this.scrollBar = new Scrollbar(16, 390);
+        this.scrollBar.x = 675;
+        this.scrollBar.y = 118;
         this.scrollBar.setIndicatorSize(399, this.characterList.height);
         this.scrollBar.addEventListener(Event.CHANGE, this.onScrollBarChange);
         addChild(this.scrollBar);
@@ -146,7 +146,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     private function createCharacterListChar():void {
         this.characterListType = CharacterList.TYPE_CHAR_SELECT;
         this.characterList = new CharacterList(this.model, CharacterList.TYPE_CHAR_SELECT);
-        this.characterList.x = this.CHARACTER_LIST_X_POS;
+        this.characterList.x = this.CHARACTER_LIST_X_POS + 80;
         this.characterList.y = this.CHARACTER_LIST_Y_POS;
         this.characterListHeight = this.characterList.height;
         if (this.characterListHeight > this.SCROLLBAR_REQUIREMENT_HEIGHT) {
@@ -259,8 +259,8 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
         this.lines.graphics.lineStyle(2, 0x545454);
         this.lines.graphics.moveTo(0, this.BOUNDARY_LINE_ONE_Y);
         this.lines.graphics.lineTo(this.getReferenceRectangle().width, this.BOUNDARY_LINE_ONE_Y);
-        this.lines.graphics.moveTo(466, 107);
-        this.lines.graphics.lineTo(466, 526);
+        //this.lines.graphics.moveTo(466, 107);
+        //this.lines.graphics.lineTo(466, 526);
         this.lines.graphics.lineStyle();
         addChild(this.lines);
     }

@@ -7,17 +7,21 @@ import flash.events.MouseEvent;
 import flash.filters.DropShadowFilter;
 import flash.geom.ColorTransform;
 
+import io.decagames.rotmg.ui.sliceScaling.SliceScalingBitmap;
+import io.decagames.rotmg.ui.texture.TextureParser;
+import io.decagames.rotmg.utils.colors.Tint;
+
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
 import kabam.rotmg.text.view.stringBuilder.StringBuilder;
 
 public class CharacterRect extends Sprite {
 
-    public static const WIDTH:int = 419;
-    public static const HEIGHT:int = 59;
+    public static const WIDTH:int = 600;
+    public static const HEIGHT:int = 70;
 
     public var color:uint;
     public var overColor:uint;
-    private var box:Shape;
+    private var box:SliceScalingBitmap;
     protected var taglineIcon:Sprite;
     protected var taglineText:TextFieldDisplayConcrete;
     protected var classNameText:TextFieldDisplayConcrete;
@@ -25,7 +29,6 @@ public class CharacterRect extends Sprite {
     public var selectContainer:Sprite;
 
     public function CharacterRect() {
-        this.box = new Shape();
         super();
     }
 
@@ -48,7 +51,10 @@ public class CharacterRect extends Sprite {
     }
 
     public function makeBox():void {
-        this.drawBox(false);
+        this.box = TextureParser.instance.getSliceScalingBitmap("UI", "popup_header_title", WIDTH);
+        this.box.height = HEIGHT;
+        this.box.x = 0;
+        this.box.y = 0;
         addChild(this.box);
     }
 
@@ -61,10 +67,16 @@ public class CharacterRect extends Sprite {
     }
 
     private function drawBox(_arg_1:Boolean):void {
-        this.box.graphics.clear();
-        this.box.graphics.beginFill(((_arg_1) ? this.overColor : this.color));
-        this.box.graphics.drawRect(0, 0, WIDTH, HEIGHT);
-        this.box.graphics.endFill();
+        if (_arg_1){
+            Tint.add(this.box, 0xC9C9C9, 0.2);
+        }
+        else {
+            this.box.transform.colorTransform = new ColorTransform();
+        };
+        this.box.scaleX = 1;
+        this.box.scaleY = 1;
+        this.box.x = 0;
+        this.box.y = 0;
     }
 
     public function makeContainer():void {
@@ -81,8 +93,8 @@ public class CharacterRect extends Sprite {
         this.taglineIcon.transform.colorTransform = new ColorTransform((179 / 0xFF), (179 / 0xFF), (179 / 0xFF));
         this.taglineIcon.scaleX = 1.2;
         this.taglineIcon.scaleY = 1.2;
-        this.taglineIcon.x = CharacterRectConstants.TAGLINE_ICON_POS_X;
-        this.taglineIcon.y = CharacterRectConstants.TAGLINE_ICON_POS_Y;
+        this.taglineIcon.x = CharacterRectConstants.TAGLINE_ICON_POS_X + 90;
+        this.taglineIcon.y = CharacterRectConstants.TAGLINE_ICON_POS_Y + 10;
         this.taglineIcon.filters = [new DropShadowFilter(0, 0, 0)];
         this.selectContainer.addChild(this.taglineIcon);
     }
@@ -92,8 +104,8 @@ public class CharacterRect extends Sprite {
         this.classNameText.setBold(true);
         this.classNameText.setStringBuilder(this.className);
         this.classNameText.filters = makeDropShadowFilter();
-        this.classNameText.x = CharacterRectConstants.CLASS_NAME_POS_X;
-        this.classNameText.y = CharacterRectConstants.CLASS_NAME_POS_Y;
+        this.classNameText.x = CharacterRectConstants.CLASS_NAME_POS_X + 90;
+        this.classNameText.y = CharacterRectConstants.CLASS_NAME_POS_Y + 10;
         this.selectContainer.addChild(this.classNameText);
     }
 
@@ -101,8 +113,8 @@ public class CharacterRect extends Sprite {
         this.taglineText = new TextFieldDisplayConcrete().setSize(14).setColor(0xB3B3B3);
         this.taglineText.setStringBuilder(_arg_1);
         this.taglineText.filters = makeDropShadowFilter();
-        this.taglineText.x = CharacterRectConstants.TAGLINE_TEXT_POS_X;
-        this.taglineText.y = CharacterRectConstants.TAGLINE_TEXT_POS_Y;
+        this.taglineText.x = CharacterRectConstants.TAGLINE_TEXT_POS_X + 90;
+        this.taglineText.y = CharacterRectConstants.TAGLINE_TEXT_POS_Y + 10;
         this.selectContainer.addChild(this.taglineText);
     }
 
