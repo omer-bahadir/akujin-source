@@ -125,7 +125,7 @@ public class CharacterSelectionAndNewsScreen extends Sprite {
     }
 
     private function createScrollbar():void {
-        this.scrollBar = new Scrollbar(16, 390);
+        this.scrollBar = new Scrollbar(16, 375);
         this.scrollBar.x = 675;
         this.scrollBar.y = 118;
         this.scrollBar.setIndicatorSize(399, this.characterList.height);

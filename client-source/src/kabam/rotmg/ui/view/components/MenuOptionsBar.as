@@ -31,7 +31,7 @@ public class MenuOptionsBar extends Sprite {
         this.box = TextureParser.instance.getSliceScalingBitmap("UI", "popup_header_title", 800);
         this.box.height = 70;
         this.box.x = 0;
-        this.box.y = 515;
+        this.box.y = 500;
         addChild(this.box);
         addChild(this.screenGraphic);
     }
@@ -42,7 +42,7 @@ public class MenuOptionsBar extends Sprite {
             case CENTER:
                 this.leftObjects[0] = (this.rightObjects[0] = _arg_1);
                 _arg_1.x = (this.screenGraphic.width / 2);
-                _arg_1.y = Y_POSITION;
+                _arg_1.y = Y_POSITION - 15;
                 return;
             case LEFT:
                 this.layoutToLeftOf(this.leftObjects[(this.leftObjects.length - 1)], _arg_1);
@@ -69,7 +69,7 @@ public class MenuOptionsBar extends Sprite {
         var _local_3:Rectangle = _arg_1.getBounds(_arg_1);
         var _local_4:Rectangle = _arg_2.getBounds(_arg_2);
         _arg_2.x = (((_arg_1.x + _local_3.left) - _local_4.right) - SPACING);
-        _arg_2.y = Y_POSITION;
+        _arg_2.y = Y_POSITION - 15;
     }
 
     private function layoutRightButtons():void {
@@ -84,7 +84,7 @@ public class MenuOptionsBar extends Sprite {
         var _local_3:Rectangle = _arg_1.getBounds(_arg_1);
         var _local_4:Rectangle = _arg_2.getBounds(_arg_2);
         _arg_2.x = (((_arg_1.x + _local_3.right) - _local_4.left) + SPACING);
-        _arg_2.y = Y_POSITION;
+        _arg_2.y = Y_POSITION - 15;
     }
 
 
