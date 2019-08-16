@@ -123,7 +123,7 @@ public class ChatListItemFactory {
 
     private function processName():String {
         var _local_1:String = ((((this.message.isWhisper) && (!(this.message.isToMe)))) ? this.message.recipient : this.message.name);
-        if ((((_local_1.charAt(0) == "#")) || ((_local_1.charAt(0) == "@")) || ((_local_1.charAt(0) == "!")))) {
+        if ((((_local_1.charAt(0) == "#")) || ((_local_1.charAt(0) == "@")) || ((_local_1.charAt(0) == "!")) || ((_local_1.charAt(0) == "$")))) {
             _local_1 = _local_1.substr(1);
         }
         return ((("<" + _local_1) + ">"));
@@ -204,6 +204,9 @@ public class ChatListItemFactory {
         }
         if (this.message.name.charAt(0) == "!") {
             return (0x1B2234);
+        }
+        if (this.message.name.charAt(0) == "$") {
+            return (0xFF3333);
         }
         if (this.message.recipient == GUILD) {
             return (10944349);

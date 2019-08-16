@@ -20,7 +20,7 @@ public class MenuOptionsBar extends Sprite {
     private const rightObjects:Array = [];
 
     private var screenGraphic:ScreenGraphic;
-    public var box:SliceScalingBitmap
+    public var box:SliceScalingBitmap;
 
     public function MenuOptionsBar() {
         this.makeScreenGraphic();

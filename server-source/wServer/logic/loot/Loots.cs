@@ -215,7 +215,8 @@ namespace wServer.logic.loot
             container.Move(
                 enemy.X + (float)((rand.NextDouble() * 2 - 1) * 0.5),
                 enemy.Y + (float)((rand.NextDouble() * 2 - 1) * 0.5));
-            if (bagType == 6) { container.Size = 125; } else { container.Size = 90; }
+            if (bagType < 3) container.Size = 80;
+			if (bagType > 3) container.Size = 100;
             enemy.Owner.EnterWorld(container);
         }
     }

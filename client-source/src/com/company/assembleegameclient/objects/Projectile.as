@@ -316,57 +316,39 @@ public class Projectile extends BasicObject {
         return (_local_4);
     }
 
-    override public function draw(_arg_1:Vector.<IGraphicsData>, _arg_2:Camera, _arg_3:int):void {
-        var _local_6:uint;
-        var _local_7:uint;
-        var _local_8:int;
-        var _local_9:int;
+    override public function draw(gfxVec:Vector.<IGraphicsData>, camera:Camera, time:int):void {
+        var trailLifetime:int;
+        var i:int;
         if (!Parameters.drawProj_) {
             return;
         }
-        var _local_4:BitmapData = this.texture_;
-        if (Parameters.projColorType_ != 0) {
-            switch (Parameters.projColorType_) {
-                case 1:
-                    _local_6 = 16777100;
-                    _local_7 = 0xFFFFFF;
-                    break;
-                case 2:
-                    _local_6 = 16777100;
-                    _local_7 = 16777100;
-                    break;
-                case 3:
-                    _local_6 = 0xFF0000;
-                    _local_7 = 0xFF0000;
-                    break;
-                case 4:
-                    _local_6 = 0xFF;
-                    _local_7 = 0xFF;
-                    break;
-                case 5:
-                    _local_6 = 0xFFFFFF;
-                    _local_7 = 0xFFFFFF;
-                    break;
-                case 6:
-                    _local_6 = 0;
-                    _local_7 = 0;
-                    break;
-            }
-            _local_4 = TextureRedrawer.redraw(_local_4, 120, true, _local_7);
+
+        var tex:BitmapData = this.texture_;
+
+        if (Parameters.data_.projectileOutline) {
+            var size:Number = (this.projProps_.size_ >= 0 ? this.projProps_.size_
+                    : ObjectLibrary.getSizeFromType(this.containerType_)) * 8;
+            tex = TextureRedrawer.redraw(tex, size, true, 0, true, 5, 18 * (size / 800));
         }
-        var _local_5:Number = (((this.props_.rotation_ == 0)) ? 0 : (_arg_3 / this.props_.rotation_));
+
+        var rotation:Number = (this.props_.rotation_ == 0 ? 0 : time / this.props_.rotation_);
         this.staticVector3D_.x = x_;
         this.staticVector3D_.y = y_;
         this.staticVector3D_.z = z_;
-        this.p_.draw(_arg_1, this.staticVector3D_, (((this.angle_ - _arg_2.angleRad_) + this.props_.angleCorrection_) + _local_5), _arg_2.wToS_, _arg_2, _local_4);
-        if (this.projProps_.particleTrail_) {
-            _local_8 = (((this.projProps_.particleTrailLifetimeMS) != -1) ? this.projProps_.particleTrailLifetimeMS : 600);
-            _local_9 = 0;
-            for (; _local_9 < 3; _local_9++) {
-                if (((!((map_ == null))) && (!((map_.player_.objectId_ == this.ownerId_))))) {
-                    if ((((this.projProps_.particleTrailIntensity_ == -1)) && (((Math.random() * 100) > this.projProps_.particleTrailIntensity_)))) continue;
+        this.p_.draw(gfxVec, this.staticVector3D_,
+                this.angle_ - camera.angleRad_ + this.props_.angleCorrection_ + rotation,
+                camera.wToS_, camera, tex);
+
+        if (!Parameters.data_.noParticlesMaster && this.projProps_.particleTrail_) {
+            trailLifetime = (this.projProps_.particleTrailLifetimeMS != -1 ? this.projProps_.particleTrailLifetimeMS : 600);
+            i = 0;
+            for (; i < 3; i++) {
+                if (map_ != null && map_.player_.objectId_ != this.ownerId_) {
+                    if (this.projProps_.particleTrailIntensity_ == -1
+                            && Math.random() * 100 > this.projProps_.particleTrailIntensity_) continue;
                 }
-                map_.addObj(new SparkParticle(100, this.projProps_.particleTrailColor_, _local_8, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
+                map_.addObj(new SparkParticle(100, this.projProps_.particleTrailColor_,
+                        trailLifetime, 0.5, RandomUtil.plusMinus(3), RandomUtil.plusMinus(3)), x_, y_);
             }
         }
     }

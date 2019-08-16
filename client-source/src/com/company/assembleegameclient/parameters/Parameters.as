@@ -136,9 +136,9 @@ public class Parameters {
         setDefaultKey("miniMapZoomOut", KeyCodes.MINUS);
         setDefaultKey("miniMapZoomIn", KeyCodes.EQUAL);
         setDefaultKey("resetToDefaultCameraAngle", KeyCodes.Z);
-        setDefaultKey("togglePerformanceStats", KeyCodes.UNSET);
+        setDefaultKey("togglePerformanceStats", KeyCodes.P);
         setDefaultKey("options", KeyCodes.O);
-        setDefaultKey("toggleCentering", KeyCodes.UNSET);
+        setDefaultKey("toggleCentering", KeyCodes.X);
         setDefaultKey("chat", KeyCodes.ENTER);
         setDefaultKey("chatCommand", KeyCodes.SLASH);
         setDefaultKey("tell", KeyCodes.TAB);
@@ -168,7 +168,7 @@ public class Parameters {
         setDefault("protipIndex", 0);
         setDefault("joinDate", MoreDateUtil.getDayStringInPT());
         setDefault("lastDailyAnalytics", null);
-        setDefault("allowRotation", false);
+        setDefault("allowRotation", true);
         setDefault("allowMiniMapRotation", false);
         setDefault("charIdUseMap", {});
         setDefault("drawShadows", true);

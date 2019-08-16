@@ -6,6 +6,7 @@ import flash.utils.Dictionary;
 public class ObjectProperties {
 
     public var type_:int;
+    public var healthBar_:int = 0;
     public var id_:String;
     public var displayId_:String;
     public var shadowSize_:int;
