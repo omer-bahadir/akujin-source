@@ -113,3 +113,4 @@ C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Deb
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client Updater.csproj.CopyComplete
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client Updater.exe
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client Updater.pdb
+C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client Updater.csprojAssemblyReference.cache
