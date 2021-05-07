@@ -14,7 +14,7 @@ namespace wServer.realm.worlds
     {
         public const string WINTER_RESOURCE = "wServer.realm.worlds.maps.nexus_winter.jm";
         public const string SUMMER_RESOURCE = "wServer.realm.worlds.maps.nexus_summer.jm";
-        public const string TROPICAL_RESOURCE = "wServer.realm.worlds.maps.Nexus_2.jm";
+        public const string TROPICAL_RESOURCE = "wServer.realm.worlds.maps.nexus_pls_work.jm";
 
         public Nexus()
         {
