@@ -617,6 +617,7 @@
     <EmbeddedResource Include="realm\worlds\maps\nexus_pls_work.jm" />
     <EmbeddedResource Include="realm\worlds\maps\Nexus_2.jm" />
     <EmbeddedResource Include="realm\worlds\maps\Almost_finished_Nexus.jm" />
+    <None Include="realm\worlds\maps\nexus.jm" />
     <None Include="wServer.cfg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
