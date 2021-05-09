@@ -91,7 +91,7 @@ namespace wServer.realm
             "NexusPortal.Harpy"
         };
         public static List<string> CurrentRealmNames = new List<string>();
-        public const int MAX_REALM_PLAYERS = 120;
+        public const int MAX_REALM_PLAYERS = 60;
         
         private static readonly ILog log = LogManager.GetLogger(typeof(RealmManager));
 
