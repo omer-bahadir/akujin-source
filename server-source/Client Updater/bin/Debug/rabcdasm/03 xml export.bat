@@ -1,1 +1,0 @@
-swfbinexport.exe client.swf
