@@ -1,4 +1,0 @@
-      getlex              QName(PackageNamespace(""), "stage")
-      pushdouble          CHANGE1
-      setproperty         QName(PackageNamespace(""), "frameRate")
-	  

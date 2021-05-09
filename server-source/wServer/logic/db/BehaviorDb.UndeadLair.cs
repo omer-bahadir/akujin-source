@@ -439,7 +439,7 @@ namespace wServer.logic
                 new Threshold(0.1,
                     new ItemLoot("Bow of the Morning Star", 0.01),
                     new ItemLoot("Doom Bow", 0.005),
-                    new ItemLoot("Aquarius Hammer", 0.01),
+                    new ItemLoot("Aquarius Hammer", 0.001),
                     new ItemLoot("Void Crusher", 0.005),
                     new ItemLoot("Wine Cellar Incantation", 0.005),
                     new TierLoot(3, ItemType.Ring, 0.2),
