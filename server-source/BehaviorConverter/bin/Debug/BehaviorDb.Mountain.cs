@@ -209,7 +209,7 @@ namespace wServer.logic
                 new TierLoot(4, ItemType.Ring, 0.005),
                 new TierLoot(4, ItemType.Ability, 0.02),
                 new Threshold(0.18,
-                    new ItemLoot("Potion of Attack", 0.40)
+                    new ItemLoot("Potion of Attack", 0.005)
                     )
             )
             .Init("Slime God",
@@ -229,8 +229,8 @@ namespace wServer.logic
                 new TierLoot(8, ItemType.Armor, 0.02),
                 new TierLoot(9, ItemType.Armor, 0.01),
                 new TierLoot(4, ItemType.Ability, 0.02),
-                new Threshold(0.40,
-                    new ItemLoot("Potion of Defense", 50)
+                new Threshold(0.18,
+                    new ItemLoot("Potion of Defense", 0.1)
                     )
             )
             .Init("Ghost God",
