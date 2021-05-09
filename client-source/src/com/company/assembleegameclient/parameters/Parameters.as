@@ -198,7 +198,7 @@ public class Parameters {
         else {
             setDefault("GPURender", false);
         }
-        setDefault("forceChatQuality", false);
+        setDefault("forceChatQuality", true);
         setDefault("hidePlayerChat", false);
         setDefault("chatStarRequirement", 0);
         setDefault("chatAll", true);
@@ -207,6 +207,7 @@ public class Parameters {
         setDefault("chatTrade", true);
         setDefault("toggleBarText", false);
         setDefault("particleEffect", true);
+        setDefault("projectileOutline", true);
         if (((data_.hasOwnProperty("playMusic")) && ((data_.playMusic == true)))) {
             setDefault("musicVolume", 1);
         }
@@ -223,7 +224,7 @@ public class Parameters {
         setDefault("tradeWithFriends", false);
         setDefault("chatFriend", false);
         setDefault("friendStarRequirement", 0);
-        setDefault("HPBar", false);
+        setDefault("HPBar", true);
         if (!data_.hasOwnProperty("needsSurvey")) {
             data_.needsSurvey = data_.needsTutorial;
             switch (int((Math.random() * 5))) {
