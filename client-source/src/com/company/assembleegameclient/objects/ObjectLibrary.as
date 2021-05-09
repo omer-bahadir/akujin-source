@@ -171,22 +171,29 @@ public class ObjectLibrary {
         return (AssetLibrary.getImageFromSet(IMAGE_SET_NAME, IMAGE_ID));
     }
 
-    public static function getRedrawnTextureFromType(_arg_1:int, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean = true, _arg_5:Number = 5):BitmapData {
-        var _local_6:BitmapData = getBitmapData(_arg_1);
-        if (Parameters.itemTypes16.indexOf(_arg_1) != -1) {
-            _arg_2 = (_arg_2 * 0.5);
+    public static function getRedrawnTextureFromType(_arg1:int, _arg2:int, _arg3:Boolean, _arg4:Boolean = true, _arg5:Number = 5) : BitmapData
+    {
+        var _local6:BitmapData = getBitmapData(_arg1);
+        if(Parameters.itemTypes16.indexOf(_arg1) != -1 || _local6.height == 16)
+        {
+            _arg2 = _arg2 * 0.5;
         }
-        var _local_7:TextureData = typeToTextureData_[_arg_1];
-        var _local_8:BitmapData = ((_local_7) ? _local_7.mask_ : null);
-        if (_local_8 == null) {
-            return (TextureRedrawer.redraw(_local_6, _arg_2, _arg_3, 0, _arg_4, _arg_5));
+        var _local7:TextureData = typeToTextureData_[_arg1];
+        var _local8:BitmapData = Boolean(_local7)?_local7.mask_:null;
+        var _local9:XML = xmlLibrary_[_arg1];
+        if(_local8 == null && _local9.hasOwnProperty("Legendary"))
+        {
+            return TextureRedrawer.redraw(_local6,_arg2,_arg3,14603786,_arg4,_arg5);
         }
-        var _local_9:XML = xmlLibrary_[_arg_1];
-        var _local_10:int = ((_local_9.hasOwnProperty("Tex1")) ? int(_local_9.Tex1) : 0);
-        var _local_11:int = ((_local_9.hasOwnProperty("Tex2")) ? int(_local_9.Tex2) : 0);
-        _local_6 = TextureRedrawer.resize(_local_6, _local_8, _arg_2, _arg_3, _local_10, _local_11, _arg_5);
-        _local_6 = GlowRedrawer.outlineGlow(_local_6, 0);
-        return (_local_6);
+        if(_local8 == null && _local9.hasOwnProperty("Special"))
+        {
+            return TextureRedrawer.redraw(_local6,_arg2,_arg3,23989,_arg4,_arg5);
+        }
+        var _local10:int = Boolean(_local9.hasOwnProperty("Tex1"))?int(int(_local9.Tex1)):int(0);
+        var _local11:int = Boolean(_local9.hasOwnProperty("Tex2"))?int(int(_local9.Tex2)):int(0);
+        _local6 = TextureRedrawer.resize(_local6,_local8,_arg2,_arg3,_local10,_local11,_arg5);
+        _local6 = GlowRedrawer.outlineGlow(_local6,0);
+        return _local6;
     }
 
     public static function getSizeFromType(_arg_1:int):int {

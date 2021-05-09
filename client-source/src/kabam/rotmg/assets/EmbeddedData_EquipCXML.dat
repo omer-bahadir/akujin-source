@@ -9,6 +9,7 @@
       <Index>0x00</Index>
     </Texture>
     <SlotType>1</SlotType>
+    <Legendary/>
     <Description>A spear used so much that the blood starting dripping for all of infinity.</Description>
     <RateOfFire>0.6</RateOfFire>
     <Sound>weapon/glass_sword</Sound>
@@ -35,7 +36,7 @@
    <SlotType>1</SlotType>
    <Description>yes.</Description>
    <RateOfFire>0.8</RateOfFire>
-   <Sound>weapon/blunt_sword</Sound>
+   <OldSound>bladeSwing</OldSound>
    <Projectile>
    	<ObjectId>Molten Shot</ObjectId>
    	<Speed>180</Speed>
