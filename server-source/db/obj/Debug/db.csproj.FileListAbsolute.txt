@@ -22,3 +22,4 @@ C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\db\obj\Debug\db.csproj
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\db\obj\Debug\db.csproj.CopyComplete
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\db\obj\Debug\db.dll
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\db\obj\Debug\db.pdb
+C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\db\obj\Debug\db.csprojAssemblyReference.cache
