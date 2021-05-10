@@ -106,7 +106,6 @@ C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\bin\Deb
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\bin\Debug\MetroFramework.Design.dll
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\bin\Debug\MetroFramework.dll
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client Updater.csprojAssemblyReference.cache
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client_Updater.Form1.resources
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client_Updater.Properties.Resources.resources
 C:\Users\Omer Bahadir\Desktop\akujin-source\server-source\Client Updater\obj\Debug\Client Updater.csproj.GenerateResource.cache
