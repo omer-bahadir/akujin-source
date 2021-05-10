@@ -43,7 +43,7 @@ namespace wServer.realm.worlds
         {
             if (!(IsLimbo = isLimbo))
             {
-                LoadMap("wServer.realm.worlds.maps.vault.wmap", MapType.Wmap);
+                LoadMap("wServer.realm.worlds.maps.vaulttest.wmap", MapType.Wmap);
                 if (psr != null)
                     Init(psr);
                 else
