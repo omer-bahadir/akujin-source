@@ -230,7 +230,7 @@ namespace wServer.logic
                 new TierLoot(9, ItemType.Armor, 0.01),
                 new TierLoot(4, ItemType.Ability, 0.02),
                 new Threshold(0.18,
-                    new ItemLoot("Potion of Defense", 0.1)
+                    new ItemLoot("Potion of Defense", )
                     )
             )
             .Init("Ghost God",
