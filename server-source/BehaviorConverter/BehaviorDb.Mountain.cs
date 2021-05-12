@@ -230,7 +230,7 @@ namespace wServer.logic
                 new TierLoot(9, ItemType.Armor, 0.01),
                 new TierLoot(4, ItemType.Ability, 0.02),
                 new Threshold(0.18,
-                    new ItemLoot("Potion of Defense", )
+                    new ItemLoot("Potion of Defense", 0.015)
                     )
             )
             .Init("Ghost God",
@@ -276,8 +276,7 @@ namespace wServer.logic
                 new TierLoot(6, ItemType.Armor, 0.08),
                 new TierLoot(7, ItemType.Armor, 0.04),
                 new TierLoot(3, ItemType.Ring, 0.05),
-                new TierLoot(3, ItemType.Ability, 0.1),
-                new ItemLoot("Purple Drake Egg", 0.01)
+                new TierLoot(3, ItemType.Ability, 0.1)
             )
             .Init("Paper Bot",
                 new State(
