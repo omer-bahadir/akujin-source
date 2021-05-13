@@ -439,8 +439,8 @@ namespace wServer.logic
                 new Threshold(0.1,
                     new ItemLoot("Bow of the Morning Star", 0.01),
                     new ItemLoot("Doom Bow", 0.005),
-                    new ItemLoot("Aquarius Hammer", 0.001),
-                    new ItemLoot("Void Crusher", 0.005),
+                    new ItemLoot("Void Crusher", 0.003),
+                    new ItemLoot("Aquarius Hammer", 0.005),
                     new ItemLoot("Wine Cellar Incantation", 0.005),
                     new TierLoot(3, ItemType.Ring, 0.2),
                     new TierLoot(4, ItemType.Ring, 0.1),
@@ -449,12 +449,6 @@ namespace wServer.logic
                     new TierLoot(3, ItemType.Ability, 0.2),
                     new TierLoot(4, ItemType.Ability, 0.15),
                     new TierLoot(5, ItemType.Ability, 0.1)
-                ),
-                new Threshold(0.2,
-                    new EggLoot(EggRarity.Common, 0.1),
-                    new EggLoot(EggRarity.Uncommon, 0.05),
-                    new EggLoot(EggRarity.Rare, 0.01),
-                    new EggLoot(EggRarity.Legendary, 0.002)
                 )
             )
             .Init("Ghost Warrior of Septavius",
@@ -504,6 +498,221 @@ namespace wServer.logic
                 ),
                 new ItemLoot("Health Potion", 0.2),
                 new ItemLoot("Magic Potion", 0.2)
-            );
+            )
+        .Init("Lair Ghost Bat",
+            new State(
+              new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(10, "Follow")
+                  ),
+              new State("Follow",
+                new NoPlayerWithinTransition(11, "Wander"),
+                new Follow(5.0, 10, coolDown: 0),
+                  new Shoot(10, projectileIndex: 0, coolDown: 3000)
+                  )))
+                .Init("Lair Grey Spectre",
+                   new State(
+                   new Wander(0.4),
+                    new Grenade(4, 50, 8, coolDown: 1000),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000)
+                       ))
+                .Init("Lair Blue Spectre",
+                    new State(
+                        new Wander(0.4),
+                    new Grenade(4, 70, 8, coolDown: 1000),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000)
+                        ))
+                   .Init("Lair White Spectre",
+                     new State(
+                    new Wander(0.4),
+                    new Grenade(4, 140, 8, coolDown: 1000),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000)
+                         ))
+                .Init("Lair Skeleton",
+                       new State(
+                           new State("Wander",
+                           new Wander(0.4),
+                           new PlayerWithinTransition(5, "Follow")
+                           ),
+                       new State("Follow",
+                          new Shoot(10, projectileIndex: 0, coolDown: 1000),
+                           new NoPlayerWithinTransition(11, "Wander"),
+                             new Follow(1.0, 10, coolDown: 0)
+                           )))
+        .Init("Lair Skeleton King",
+            new State(
+                new State("Wander",
+                new PlayerWithinTransition(5, "Follow"),
+                new Wander(0.4)
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, count: 3, projectileIndex: 0, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                    )))
+        .Init("Lair Skeleton Mage",
+            new State(
+                new State("Wander",
+                    new PlayerWithinTransition(5, "Follow"),
+                    new Wander(0.4)
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Follow(1.0, 10, coolDown: 0),
+                    new Shoot(10, count: 1, projectileIndex: 0, coolDown: 1000)
+                    )))
+        .Init("Lair Skeleton Swordsman",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new Follow(1.0, 10, coolDown: 0),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1),
+                    new NoPlayerWithinTransition(11, "Wander")
+                    )))
+        .Init("Lair Skeleton Veteran",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                    )))
+        .Init("Lair Mummy",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                      )))
+        .Init("Lair Mummy King",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                      )))
+        .Init("Lair Mummy Pharaoh",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, projectileIndex: 0, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                    )))
+        .Init("Lair Big Brown Slime",
+            new State(
+                new Wander(0.4),
+                new Shoot(10, count: 3, coolDown: 500)
+           // new TransformOnDeath("Lair Little Brown Slime", min: 5, max: 6, probability: 1, returnToSpawn: false)
+           ))
+        .Init("Lair Little Brown Slime",
+            new State(
+                new Wander(0.4),
+                new Shoot(10, count: 3, coolDown: 500)
+                 ))
+        .Init("Lair Big Black Slime",
+            new State(
+                new Wander(0.4),
+                new Shoot(10, count: 1, coolDown: 500)
+           //   new TransformOnDeath("Lair Medium Black Slime", min: 3, max: 4, probability: 1, returnToSpawn: false)
+           ))
+        .Init("Lair Medium Black Slime",
+            new State(
+                new Wander(0.4),
+                //   new TransformOnDeath("Lair Small Black Slime", min: 5, max: 6, probability: 1, returnToSpawn: false),
+                new Shoot(10, count: 1, coolDown: 500)
+                ))
+        .Init("Lair Little Black Slime",
+            new State(
+                new Wander(0.4),
+                new Shoot(10, count: 3, coolDown: 500)
+                ))
+         .Init("Lair Construct Giant",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, count: 3, projectileIndex: 0, coolDown: 1000),
+                    new Shoot(10, count: 1, projectileIndex: 1, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                     )))
+         .Init("Lair Construct Titan",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(5, "Follow")
+                    ),
+                new State("Follow",
+                    new NoPlayerWithinTransition(11, "Wander"),
+                    new Shoot(10, count: 3, projectileIndex: 0, coolDown: 1000),
+                    new Shoot(10, count: 3, projectileIndex: 1, coolDown: 1000),
+                    new Follow(1.0, 10, coolDown: 0)
+                    )))
+          .Init("Lair Brown Bat",
+            new State(
+              new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(10, "Follow")
+                  ),
+              new State("Follow",
+                new NoPlayerWithinTransition(11, "Wander"),
+                new Follow(5.0, 10, coolDown: 0),
+                  new Shoot(10, projectileIndex: 0, coolDown: 3000)
+                  )))
+        .Init("Lair Reaper",
+            new State(
+                 new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(10, "Follow")
+                  ),
+              new State("Follow",
+                new NoPlayerWithinTransition(11, "Wander"),
+                new Follow(1.5, 10, coolDown: 0),
+                  new Shoot(10, projectileIndex: 0, coolDown: 200)
+                  )))
+        .Init("Lair Vampire",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(10, "Follow")
+                  ),
+              new State("Follow",
+                new NoPlayerWithinTransition(11, "Wander"),
+                new Follow(1.5, 10, coolDown: 0),
+                  new Shoot(10, projectileIndex: 0, coolDown: 500),
+                  new Shoot(10, projectileIndex: 1, coolDown: 1000)
+                    )))
+        .Init("Lair Vampire King",
+            new State(
+                new State("Wander",
+                    new Wander(0.4),
+                    new PlayerWithinTransition(10, "Follow")
+                  ),
+              new State("Follow",
+                new NoPlayerWithinTransition(11, "Wander"),
+                new Follow(1.5, 10, coolDown: 0),
+                  new Shoot(10, projectileIndex: 0, coolDown: 500),
+                  new Shoot(10, projectileIndex: 1, coolDown: 1000)
+                )));
     }
 }
