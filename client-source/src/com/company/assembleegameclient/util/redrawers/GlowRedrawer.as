@@ -16,8 +16,8 @@ import flash.utils.Dictionary;
 public class GlowRedrawer {
 
     private static const GRADIENT_MAX_SUB:uint = 0x282828;
-    private static const GLOW_FILTER:GlowFilter = new GlowFilter(0, 0.3, 12, 12, 2, BitmapFilterQuality.LOW, false, false);
-    private static const GLOW_FILTER_ALT:GlowFilter = new GlowFilter(0, 0.5, 16, 16, 3, BitmapFilterQuality.LOW, false, false);
+    private static const GLOW_FILTER:GlowFilter = new GlowFilter(0, 0.3, 8, 8, 2, 1, false, false);
+    private static const GLOW_FILTER_OUTLINE:GlowFilter = new GlowFilter(0, 1, 2, 2, 255, 1, false, false);
     private static var tempMatrix_:Matrix = new Matrix();
     private static var gradient_:Shape = getGradient();
     private static var glowHashes:Dictionary = new Dictionary();
@@ -41,8 +41,8 @@ public class GlowRedrawer {
         _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, TextureRedrawer.OUTLINE_FILTER);
         if (!(_arg_2 == 0))
         {
-            GLOW_FILTER_ALT.color = _arg_2;
-            _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER_ALT);
+            GLOW_FILTER_OUTLINE.color = _arg_2;
+            _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER_OUTLINE);
             GLOW_FILTER.color = _arg_2
             _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER);
         }
