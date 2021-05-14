@@ -39,15 +39,12 @@ public class GlowRedrawer {
         var _local_8:uint;
         TextureRedrawer.OUTLINE_FILTER.color = _local_8;
         _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, TextureRedrawer.OUTLINE_FILTER);
-        if (_arg_2 != 0xFFFFFFFF) {
-            if (((Parameters.isGpuRender()) && (!((_arg_2 == 0))))) {
-                GLOW_FILTER_ALT.color = _arg_2;
-                _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER_ALT);
-            }
-            else {
-                GLOW_FILTER.color = _arg_2;
-                _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER);
-            }
+        if (!(_arg_2 == 0))
+        {
+            GLOW_FILTER_ALT.color = _arg_2;
+            _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER_ALT);
+            GLOW_FILTER.color = _arg_2
+            _local_6.applyFilter(_local_6, _local_6.rect, PointUtil.ORIGIN, GLOW_FILTER);
         }
         if (_arg_4) {
             cache(_arg_1, _arg_2, _arg_3, _local_6);

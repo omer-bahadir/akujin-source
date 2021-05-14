@@ -185,9 +185,9 @@ public class ObjectLibrary {
         {
             return TextureRedrawer.redraw(_local6,_arg2,_arg3,14603786,_arg4,_arg5);
         }
-        if(_local8 == null && _local9.hasOwnProperty("Special"))
+        if(_local8 == null && _local9.hasOwnProperty("Ancient"))
         {
-            return TextureRedrawer.redraw(_local6,_arg2,_arg3,23989,_arg4,_arg5);
+            return TextureRedrawer.redraw(_local6,_arg2,_arg3,10354688,_arg4,_arg5);
         }
         var _local10:int = Boolean(_local9.hasOwnProperty("Tex1"))?int(int(_local9.Tex1)):int(0);
         var _local11:int = Boolean(_local9.hasOwnProperty("Tex2"))?int(int(_local9.Tex2)):int(0);

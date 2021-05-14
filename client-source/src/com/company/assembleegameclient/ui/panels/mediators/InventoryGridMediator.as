@@ -18,6 +18,7 @@ public class InventoryGridMediator extends Mediator {
         this.updateHUD.add(this.onUpdateHUD);
     }
 
+
     override public function destroy():void {
         this.updateHUD.remove(this.onUpdateHUD);
     }

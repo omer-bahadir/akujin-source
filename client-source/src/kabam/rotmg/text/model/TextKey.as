@@ -156,7 +156,7 @@ public class TextKey {
     public static const STAT_MODEL_VITALITY_SHORT:String = "StatModel.vitality.short";
     public static const STAT_MODEL_VITALITY_DESCRIPTION:String = "StatModel.vitality.description";
     public static const STAT_MODEL_VITALITY_LONG:String = "StatModel.vitality.long";
-    public static const COPYRIGHT:String = "Akujin -2019";
+    public static const COPYRIGHT:String = "Akujin -2021";
     public static const CURRENCY_FAME:String = "Currency.fame";
     public static const CHARACTER_DETAILS_VIEW_OPTIONS:String = "CharacterDetailsView.Options";
     public static const CHARACTER_DETAILS_VIEW_NEXUS:String = "CharacterDetailsView.Nexus";

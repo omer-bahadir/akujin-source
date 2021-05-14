@@ -169,6 +169,12 @@ public class EquipmentToolTip extends ToolTip {
                 if (this.objectXML.hasOwnProperty("@setType")) {
                     this.tierText.setColor(0xFF9900);
                     this.tierText.setStringBuilder(new StaticStringBuilder("ST"));
+                }else if (this.objectXML.hasOwnProperty("Legendary")) {
+                    this.tierText.setColor(0xFFFF00);
+                    this.tierText.setStringBuilder(new StaticStringBuilder("LT"));
+                }else if (this.objectXML.hasOwnProperty("Ancient"))  {
+                    this.tierText.setColor(0x9E0000);
+                    this.tierText.setStringBuilder(new StaticStringBuilder("AN"));
                 }
                 else {
                     this.tierText.setColor(9055202);
